@@ -1,8 +1,41 @@
-Single-Pixel Camera (SPC) is a new and innovative technology in the field of imaging that offers a cost-effective solution compared to conventional/traditional multimillion-pixel
-cameras. SPCs have garnered attention for their ability to capture images outside the visible spectrum of light where detector technology can be difficult or expensive to produce. The ability to capture images outside the visible spectrum of light (where detector technology can be difficult or expensive to produce) is what makes SPCs a valuable tool for various applications. So, there’s motivation for creating SPCs at a more cost-efficient price so that it can provide a solution for capturing images in various situations.
+# Single-Pixel Camera
 
-The primary goal of this project is to design and construct a budget prototype of a single-pixel camera that can perform tasks such as capturing an image using a single pixel
-and reconstructing an image from raw measurement data through the use of proper decoding algorithms. This principle is founded on the concept that compressive sensing techniques,
-such as Lasso regression, can be used to recover the original image. To supplement this, a prototype simulation would also be created using the MATLAB Engine to showcase a reconstructed image and its similarity to the original using a single detector and a sequence of optimized patterns. This design process would highlight the potential challenges that could arise from data acquisition and algorithm performance, as well as how the single-pixel camera might perform in real-world scenarios, before a physical concept is constructed.
+A low-cost single-pixel camera prototype built with an RGB sensor, Arduino, 
+and stepper motors, paired with a MATLAB simulation for image reconstruction 
+using compressive sensing.
 
-Overall, the goal of this project is to showcase the potential of SPCs as a costeffective solution for imaging compared to the conventional multimillion-pixel cameras as the system for the simulation would be able to return images up to a near perfect accuracy while the prototype produced pictures which while certainly would be low-res due to budget constraints, are ultimately good enough in its ability to pick out recognizable forms with a little imagination.
+## Overview
+
+Conventional cameras use millions of pixels to capture an image simultaneously. 
+A single-pixel camera does the opposite — it captures one measurement at a time 
+using structured light patterns, then reconstructs the full image mathematically. 
+This makes it viable for imaging beyond the visible spectrum where traditional 
+sensors are expensive or impractical.
+
+## How it works
+
+1. A sequence of optimised light patterns is projected onto the scene
+2. A single RGB sensor records the reflected intensity for each pattern
+3. Lasso regression (compressive sensing) reconstructs the original image 
+   from the raw measurements
+4. A MATLAB simulation validates the approach before physical construction
+
+## Results
+
+- Simulation achieved near-perfect image reconstruction accuracy
+- Physical prototype successfully captured recognisable low-resolution images 
+  within hardware budget constraints
+
+## Stack
+
+MATLAB · C · Processing · Arduino
+
+## Structure
+
+- `simulation/` — MATLAB simulation code and image reconstruction pipeline
+- `hardware/` — 3D printed component files for the physical prototype
+- `docs/` — Full project report
+
+## Background
+
+BEng Final Year Project — University of Kent (Distinction)
